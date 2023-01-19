@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/if18b120/WoT-Checker/issues"
   },
-  "homepage": "https://github.com/if18b120/WoT-Checker#readme"
+  "homepage": "https://github.com/if18b120/WoT-Checker#readme",
+  "dependencies": {
+    "puppeteer": "^19.5.2"
+  }
 }

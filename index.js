@@ -17,12 +17,7 @@ async function bra () {
     await page.goto("https://eu.wargaming.net/shop/wot/vehicles/", {waitUntil: ["networkidle0"]});
     await page.waitForSelector("#onetrust-accept-btn-handler");
     await page.click("#onetrust-accept-btn-handler");
-    let foo = await page.content();
-    // foo.includes(/primo/)
-    // console.log(process.argv[2])
-    // console.log(new RegExp(process.argv[2], "ig").test(foo));
-    new RegExp(process.argv[2], "ig").test(foo) ? process.exitCode = 0 : process.exitCode = 1;
-    // /Bourrasque/gi.test(foo) ? process.exitCode = 0 : process.exitCode = 1;
+    new RegExp(process.argv[2], "ig").test(await page.content()) ? process.exitCode = 0 : process.exitCode = 1;
     await browser.close();
 }
 
